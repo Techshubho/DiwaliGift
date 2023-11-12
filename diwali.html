@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy diwali</title>
+    <link rel="icon" href="2.jpeg">
+    <style>
+        .sb {
+            width: 100%;
+            height: 100%;
+            z-index: 1000;
+            line-height: 40px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            cursor: pointer;
+        }
+        
+        #so {
+            display: none;
+        }
+        
+        .sidebar {
+            width: 52.7%;
+            height: 100vh;
+            position: fixed;
+            right: 0px;
+            top: 0px;
+            z-index: 108;
+            background: url(images/g2.JPG);
+            transition: all 4s;
+        }
+        
+        .sidebar.a {
+            width: 50%;
+            height: 100vh;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            z-index: 107;
+            background: url(images/g1.JPG);
+            transition: all 4s;
+        }
+        
+        .c::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .c {
+            width: 74%;
+            height: 500px;
+            cursor: pointer;
+            border-radius: 20px;
+            position: relative;
+            display: block;
+            left: 11.8%;
+            bottom: 00px;
+            opacity: 1;
+            background-color: rgba(206, 202, 202, .7);
+            transform-origin: bottom;
+            transform: scale(0);
+            transition: all 4s;
+            transition-duration: .7s;
+            overflow: auto;
+        }
+        
+        .c::after {
+            content: "";
+            background: url(images/dipbac.jpg) no-repeat;
+            background-size: 140% 600px;
+            opacity: .7;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: -1;
+        }
+        
+        #so:checked~.c {
+            transform: scale(1);
+            transition: all 4s;
+            transform-origin: top;
+            color: white;
+        }
+        
+        #so:checked~.sidebar {
+            right: -42.7%;
+            transition: all 4 s;
+        }
+        
+        #so:checked~.sidebar.a {
+            left: -40%;
+            transition: all 4s;
+        }
+        
+        #so:checked~.sb {
+            opacity: 0;
+        }
+        
+        #video {
+            width: 80%;
+            height: 100vh;
+            position: fixed;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            min-width: 100%;
+            width: auto;
+            height: auto;
+            z-index: -9999;
+        }
+        
+        .happy {
+            width: 100%;
+            height: 100px;
+            padding: 20px;
+            text-align: center;
+            font-size: 50px;
+            position: absolute;
+            opacity: 1;
+            font-family: cursive;
+            color: gold;
+        }
+        
+        .textcon {
+            position: absolute;
+            top: 150px;
+            padding: 20px;
+            font-size: 25px;
+            color: white;
+        }
+        /*================================= mubile nivagation bar End =================================*/
+    </style>
+</head>
+
+<body>
+    
+<script type="text/javascript">
+    window.onload=function(){
+      const audio = new Audio("diye.mp3");
+      audio.play();
+      }
+    </script>
+    
+
+    <!--------------------- nivagation bar in mubile---------------------------->
+    <section class="part">
+        <video id="video" autoplay muted loop src="diwali.mov"></video>
+        <input type="checkbox" id="so">
+        <label for="so" class="sb"></label>
+        <div class="sidebar"></div>
+        <div class="sidebar a"></div>
+        <div class="c">
+            <div class="happy">Happy Diwali</div>
+            <div class="textcon">:-&nbsp;&nbsp;&nbsp;Happiness is in the air. It’s Diwali everywhere. Let’s show some love , care and wish everyone out there. Shubh Diwali!<br><br> :-&nbsp;&nbsp; &nbsp;May this festival of lights brightens your life and brings happiness,
+                joy and prosperity for you and your family. Happy Diwali.</div>
+        </div>
+
+    </section>
+    <!--------------------- nivagation bar in mubile End---------------------------->
+
+</body>
+
+</html>
